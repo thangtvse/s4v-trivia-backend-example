@@ -3,7 +3,7 @@ import os
 
 import jwt
 
-from main.config import config
+from main.config import JWT_SECRET
 
 
 def encode(audience):
@@ -14,7 +14,7 @@ def encode(audience):
             "iat": iat,
             "exp": iat + datetime.timedelta(days=365),
         },
-        config["JWT_SECRET"],
+        JWT_SECRET,
     )
 
 

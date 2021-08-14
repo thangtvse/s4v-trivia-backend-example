@@ -3,7 +3,7 @@ import logging
 from flask import Flask
 from flask_cors import CORS
 
-from main.config import config
+from main import config
 from main.error_handlers import register_error_handlers
 
 app = Flask(__name__)
